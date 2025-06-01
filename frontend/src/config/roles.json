@@ -1,0 +1,6 @@
+[
+    {"id": 3, "translationSlug": "roles.name.owner"},
+    {"id": 4, "translationSlug": "roles.name.admin"},
+    {"id": 5, "translationSlug": "roles.name.collaborator"},
+    {"id": 6, "translationSlug": "roles.name.guest"}
+]

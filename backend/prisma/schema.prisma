@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Represents a farm in the system
+model Farm {
+  id         Int          @id @default(autoincrement())
+  name       String
+  createdAt  DateTime     @default(now())
+  FarmSeason FarmSeason[]
+}
+
+// Represents a season in which a farm operates
+// This model allows for many-to-many relationships between farms and seasons
+model Season {
+  id         Int          @id @default(autoincrement())
+  name       String
+  createdAt  DateTime     @default(now())
+  FarmSeason FarmSeason[]
+}
+
+// Represents the many-to-many relationship between farms and seasons
+// Functionnaly, this represents a harvest season for a farm
+model FarmSeason {
+  id         Int      @id @default(autoincrement())
+  farmId     Int
+  seasonId   Int
+  status     String // e.g. "SUBSCRIBED", "ACTIVE", "COMPLETED", "INACTIVE"
+  isBaseline Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  farm   Farm   @relation(fields: [farmId], references: [id])
+  season Season @relation(fields: [seasonId], references: [id])
+}
