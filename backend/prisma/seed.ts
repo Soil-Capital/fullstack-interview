@@ -23,18 +23,38 @@ async function main() {
   console.log("Created seasons:", seasons.map((s) => s.name).join(", "));
 
   // Create farms
-  const farmNames = [
-    "Lettuce Turnip the Beet",
-    "Barley Legal",
-    "Corn of the Dreams",
-    "Thyme After Thyme",
+  const farmElements = [
+    {
+      name: "Lettuce Turnip the Beet",
+      email: "lettuce@turnip.beet",
+      partner: null,
+      contact: "LT"
+    },
+    {
+      name: "Barley Legal",
+      email: "almost@illegal.com",
+      partner: "Heisenberg",
+      contact: "WW"
+    },
+    {
+      name: "Corn of the Dreams",
+      email: "unicorn@dream.com",
+      partner: "John Doe",
+      contact: null
+    },
+    {
+      name: "Thyme After Thyme",
+      email: "thyme@theme.ton",
+      partner: "Satoshi Nakamoto",
+      contact: "MM"
+    }
   ];
 
   const farms = await Promise.all(
-    farmNames.map(async (name) => {
+    farmElements.map(async (farm) => {
       return prisma.farm.create({
         data: {
-          name: name,
+          ...farm
         },
       });
     })
