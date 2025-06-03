@@ -4,7 +4,9 @@ import i18n from 'i18next';
 
 type UserT = {
     id: number;
+    name: string;
     email: string;
+    token: string;
 };
 
 export const authApi = api.injectEndpoints({

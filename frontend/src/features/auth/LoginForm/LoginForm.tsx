@@ -5,10 +5,12 @@ import * as yup from 'yup';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useLoginMutation } from '@services';
-import { setStorageToken } from '@utils';
+import { setStorageToken, setStorageUser } from '@utils';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import useLoginFormStyle from './LoginForm.style';
+import { useAppDispatch } from '@hooks';
+import { setCurrentUser } from '@features/auth';
 
 type LoginFormDataT = {
     email: string;
@@ -20,6 +22,7 @@ function LoginForm() {
     const { classes } = useLoginFormStyle();
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
 
     const LoginFormSchema = yup.object({
         email: yup.string().email(t('validations.email-invalid')).required(t('validations.email-required')),
@@ -35,6 +38,10 @@ function LoginForm() {
     const onSubmit = async (data: LoginFormDataT) => {
         try {
             const body = await login(data).unwrap();
+            const remember: boolean = data.remember;
+            dispatch(setCurrentUser(body[0]));
+            setStorageUser(body[0]);
+            setStorageToken(body[0].token, remember)
             navigate('/');
         } catch (err) {
             console.error(err);
