@@ -1,8 +1,10 @@
 {
   "users": [
     {
+      "id": 1,
       "name": "hktsme",
-      "email": "hkts.yves@gmail.com"
+      "email": "hkts.yves@gmail.com",
+      "partner_id": 2
     }
   ]
 }
