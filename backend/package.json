@@ -9,7 +9,8 @@
     "lint": "eslint --ext .ts src",
     "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push",
-    "prisma:seed": "ts-node prisma/seed.ts"
+    "prisma:seed": "ts-node prisma/seed.ts",
+    "prisma:reset": "rm -rf prisma/dev.db && touch prisma/dev.db && prisma generate && prisma db push && ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.8.2",
