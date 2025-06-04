@@ -8,6 +8,16 @@ export const getFarmsWithLatestSeason = async (_req: Request, res: Response) => 
         const farms = await prisma.farm.findMany({
             include: {
                 FarmSeason: {
+                    where:{
+                        season:{
+                            is:{
+                                // Assumption : We want latest season for the current year (or lower)
+                                name: {
+                                    lte: new Date().getFullYear().toString()
+                                }
+                            }
+                        }
+                    },
                     include: {
                         season: true
                     },
@@ -36,3 +46,44 @@ export const getFarmsWithLatestSeason = async (_req: Request, res: Response) => 
         res.status(500).json({ error: 'Failed to fetch farms' });
     }
 };
+
+export const getFarmById = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const farm = await prisma.farm.findUnique({
+            where: { id: Number(id) },
+            include: {
+                FarmSeason: {
+                    include: {
+                        season: true
+                    },
+                    orderBy: {
+                        createdAt: 'asc' // assumption the season are created in the order of the timeline
+                    }
+                }
+            }
+        });
+
+        if (!farm) {
+            return res.status(404).json({ error: 'Farm not found' });
+        }
+
+        const farmWithSeasons = {
+            id: farm.id,
+            name: farm.name,
+            createdAt: farm.createdAt,
+            seasons: farm.FarmSeason.map(fs => ({
+                id: fs.id,
+                status: fs.status,
+                seasonName: fs.season.name,
+                createdAt: fs.createdAt,
+                isBaseline: fs.isBaseline
+            }))
+        };
+
+        res.json(farmWithSeasons);
+    } catch (error) {
+        console.error('Error fetching farm details:', error);
+        res.status(500).json({ error: 'Failed to fetch farm details' });
+    }
+}; 

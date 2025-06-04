@@ -37,7 +37,15 @@
   },
   "farms":{
     "name": "Farm Name",
-    "latest-season-status": "Latest Season Status"
+    "latest-season-status": "Latest Season Status",
+    "seasons":{
+      "status": {
+        "subscribed": "Subscribed",
+        "active": "Active",
+        "completed": "Completed",
+        "inactive": "Inactive"
+      }
+    }
   },
   "db": {
     "country": {
@@ -331,6 +339,7 @@
     "all-members": "All members",
     "already-have-an-account": "Already have an account ?",
     "average-result": "Avg. result (per ha)",
+    "baseline-season": "Baseline season",
     "baseline-season-years": "Baseline season ({{years}})",
     "city": "City",
     "completed": "Completed",
@@ -377,6 +386,7 @@
     "results": "Results",
     "role": "Role",
     "season-count-years": "Season {{count}} ({{years}})",
+    "season": "Season",
     "simulation": "Simulation",
     "simulation-completed": "Simulation completed",
     "simulation-completed_one": "Simulation completed",
@@ -542,7 +552,8 @@
     "reset-your-password": "Reset your password",
     "settings": "Settings",
     "teams": "My teams",
-    "your-programme": "Your programme"
+    "your-programme": "Your programme",
+    "seasons": "Seasons Timeline"
   },
   "validations": {
     "confirm-password-required": "Password required",
