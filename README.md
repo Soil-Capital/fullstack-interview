@@ -1,4 +1,3 @@
-
 # Welcome
 
 Below you'll find the instructions to complete this technical assignment.
@@ -22,7 +21,8 @@ SoilCapital is booming and it is now time to provide our dearest agronomists a w
 
 Your mission is to provide them a way to display the list and profiles of the farmers who have subscribed to our 5 years programme to regenerate their soil.
 
-So far, our PM has identified 4 status.
+    So far, our PM has identified 4 status.
+
 * SUBSCRIBED: The farmer has subscribed to the baseline (reference year) or has renewed for a new season
 * ACTIVE: The farmer is currently encoding the farm's data, or the carbon results generation are on their way
 * COMPLETED: The season is finalized. Carbon results have been generated, the farm is either being audited or the farm has received their carbon payment thanks to their practices improvements
@@ -30,13 +30,13 @@ So far, our PM has identified 4 status.
 
 ### Frontend
 
-* Be a hacker: find a way to successfully login to the app - hint: no code change needed.
+* Be a hacker: find a way to successfully login to the app - hint: no code change needed. => password = hU3HUAy^yf97 and to find a valid user email => https://jsonplaceholder.typicode.com/users
 * Be a saviour: fix a bug in the app.  Each time we refresh the page, we're back to the login screen.  Fix it so we stay on the current page.
-* Be a builder: add two new pages to the app in order to 
-    * Fetch the farms from the backend in this repo to display a list showing the farm's name as well as the status of their latest season
-    * Display the farm profile when clicking on one of the farms of the list. The profile should include :
-        * The farm name
-        * A timeline showing the various seasons of the farm and the status of each farm
+* Be a builder: add two new pages to the app in order to
+  * Fetch the farms from the backend in this repo to display a list showing the farm's name as well as the status of their latest season
+  * Display the farm profile when clicking on one of the farms of the list. The profile should include :
+    * The farm name
+    * A timeline showing the various seasons of the farm and the status of each farm
 
 Here are some screenshots of the current implementation for *inspiration*
 

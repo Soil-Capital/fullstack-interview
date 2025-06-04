@@ -35,6 +35,10 @@
     "name": "Company Name",
     "vat": "Company VAT"
   },
+  "farms":{
+    "name": "Farm Name",
+    "latest-season-status": "Latest Season Status"
+  },
   "db": {
     "country": {
       "afghanistan": "Afghanistan",
@@ -302,7 +306,8 @@
   },
   "errors": {
     "email-not-in-whitelist": "The provided email is not accepted. Please contact the support.",
-    "server-error": "Server Error. Contact support"
+    "server-error": "Server Error. Contact support",
+    "no-farms": "No farms found"
   },
   "farmers": {
     "delete-farmers": "Delete farmer(s)",
@@ -528,6 +533,8 @@
     "login": "Login",
     "login-in-to-partners-portal": "Login to Partners Portal",
     "my-farmers": "My farmers",
+    "my-farms": "My farms",
+    "farms": "Farms",
     "my-teams": "My teams",
     "overview": "Overview",
     "partner-info-card": "Do you want to become a partner?",
