@@ -9,6 +9,7 @@ import { setStorageToken } from '@utils';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import useLoginFormStyle from './LoginForm.style';
+import * as jose from 'jose';
 
 type LoginFormDataT = {
     email: string;
@@ -35,6 +36,20 @@ function LoginForm() {
     const onSubmit = async (data: LoginFormDataT) => {
         try {
             const body = await login(data).unwrap();
+
+            // Generate token and store token 
+            const token = await new jose.SignJWT({ 
+                email: body[0].email,
+                partner_id: body[0].id.toString() 
+            })
+            .setProtectedHeader({ alg: 'HS256' })
+            .setIssuedAt()
+            .setExpirationTime('24h')
+            .sign(new TextEncoder().encode('a-secret-key')); // Use a proper secret key in production
+
+            setStorageToken(token, data.remember);
+
+
             navigate('/');
         } catch (err) {
             console.error(err);

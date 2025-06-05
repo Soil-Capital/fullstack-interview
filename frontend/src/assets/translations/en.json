@@ -35,6 +35,19 @@
     "name": "Company Name",
     "vat": "Company VAT"
   },
+  "farms":{
+    "name": "Farm Name",
+    "latest-season-status": "Latest Season Status",
+    "latest-season-name": "Latest Season Name",
+    "seasons":{
+      "status": {
+        "subscribed": "Subscribed",
+        "active": "Active",
+        "completed": "Completed",
+        "inactive": "Inactive"
+      }
+    }
+  },
   "db": {
     "country": {
       "afghanistan": "Afghanistan",
@@ -302,7 +315,8 @@
   },
   "errors": {
     "email-not-in-whitelist": "The provided email is not accepted. Please contact the support.",
-    "server-error": "Server Error. Contact support"
+    "server-error": "Server Error. Contact support",
+    "no-farms": "No farms found"
   },
   "farmers": {
     "delete-farmers": "Delete farmer(s)",
@@ -326,6 +340,7 @@
     "all-members": "All members",
     "already-have-an-account": "Already have an account ?",
     "average-result": "Avg. result (per ha)",
+    "baseline-season": "Baseline season",
     "baseline-season-years": "Baseline season ({{years}})",
     "city": "City",
     "completed": "Completed",
@@ -372,6 +387,7 @@
     "results": "Results",
     "role": "Role",
     "season-count-years": "Season {{count}} ({{years}})",
+    "season": "Season",
     "simulation": "Simulation",
     "simulation-completed": "Simulation completed",
     "simulation-completed_one": "Simulation completed",
@@ -528,6 +544,8 @@
     "login": "Login",
     "login-in-to-partners-portal": "Login to Partners Portal",
     "my-farmers": "My farmers",
+    "my-farms": "My farms",
+    "farms": "Farms",
     "my-teams": "My teams",
     "overview": "Overview",
     "partner-info-card": "Do you want to become a partner?",
@@ -535,7 +553,8 @@
     "reset-your-password": "Reset your password",
     "settings": "Settings",
     "teams": "My teams",
-    "your-programme": "Your programme"
+    "your-programme": "Your programme",
+    "seasons": "Seasons Timeline"
   },
   "validations": {
     "confirm-password-required": "Password required",
