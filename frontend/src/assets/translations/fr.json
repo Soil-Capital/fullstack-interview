@@ -313,7 +313,17 @@
       "title": "Inviter le(s) agriculteur(s)",
       "upload-csv": "Charger un fichier CSV"
     },
-    "remove-farmer": "Supprimer l’agriculteur"
+    "remove-farmer": "Supprimer l’agriculteur",
+    "unsubscribe-farmer": "Désinscrire l’agriculteur",
+    "back-to-farm-list": "Retourner à la liste d’agriculteur"
+  },
+  "farm-season": {
+    "reference": "Saison de référence",
+    "season": "Saison",
+    "subscribed": "Inscrit",
+    "active": "En cours",
+    "completed": "Complété",
+    "inactive": "Inactive"
   },
   "labels-language": "Langue",
   "labels": {
@@ -520,6 +530,7 @@
     "create-team": "Créer une équipe",
     "dashboard": "Tableau de bord",
     "edit-member": "Editer un membre ",
+    "farm-detail": "Détail ferme",
     "farm-settings-modal": "Paramètres de la ferme",
     "farmer-confirm-removal-modal": "Supprimer l’agriculteur",
     "farmer-info-card": "Êtes-vous un agriculteur ?",

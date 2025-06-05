@@ -11,8 +11,11 @@ datasource db {
 model Farm {
   id         Int          @id @default(autoincrement())
   name       String
+  email      String       @unique
+  partner    String?
+  contact    String?
   createdAt  DateTime     @default(now())
-  FarmSeason FarmSeason[]
+  farmSeason FarmSeason[]
 }
 
 // Represents a season in which a farm operates
@@ -21,7 +24,7 @@ model Season {
   id         Int          @id @default(autoincrement())
   name       String
   createdAt  DateTime     @default(now())
-  FarmSeason FarmSeason[]
+  farmSeason FarmSeason[]
 }
 
 // Represents the many-to-many relationship between farms and seasons

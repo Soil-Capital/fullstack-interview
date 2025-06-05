@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "hktsme",
+      "email": "hkts.yves@gmail.com",
+      "partner_id": 2,
+      "token": "InsiaWQiOjEsIm5hbWUiOiJoa3RzbWUiLCJlbWFpbCI6ImhrdHMueXZlc0BnbWFpbC5jb20iLCJwYXJ0bmVyX2lkIjoyfSIg"
+    }
+  ]
+}

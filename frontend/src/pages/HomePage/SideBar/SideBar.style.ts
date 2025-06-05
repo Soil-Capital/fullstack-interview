@@ -8,10 +8,10 @@ export default makeStyles()((theme) => {
         },
         navLinkActive: {
             borderRadius: '10px 0 0 10px',
-            backgroundColor: '#f6f3E5',
+            backgroundColor: '#EEE',
             cursor: 'default',
             '&:hover': {
-                backgroundColor: '#f6f3E5',
+                backgroundColor: '#EEE',
             },
         },
         navLink: {

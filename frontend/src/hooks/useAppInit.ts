@@ -1,5 +1,5 @@
-import { addToken } from '@features/auth';
-import { getStorageToken } from '@utils';
+import { addToken, setCurrentUser } from '@features/auth';
+import { getStorageToken, getStorageUser } from '@utils';
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from '@hooks';
 
@@ -10,9 +10,11 @@ export const useAppInit = () => {
     useEffect(() => {
         async function loadToken() {
             const token = getStorageToken();
-            if (token) {
-                dispatch(addToken(token));
-            }
+            if (token) dispatch(addToken(token));
+
+            const user = getStorageUser();
+            if (user) dispatch(setCurrentUser(user));
+
             setInitialized(true);
         }
 

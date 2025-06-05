@@ -30,10 +30,10 @@ export default makeStyles<HomePageStyleT>()((theme, { sideBarOpen }) => {
             height: '100%',
             float: 'left',
             transition: 'all 0.3s ease',
-            '& .sideBarCollapseBtn': {
-                transition: 'opacity 0.15s ease',
-                opacity: 0,
-            },
+            // '& .sideBarCollapseBtn': {
+            //     transition: 'opacity 0.15s ease',
+            //     opacity: 0,
+            // },
             '&:hover .sideBarCollapseBtn': {
                 opacity: 1,
             },
@@ -45,7 +45,7 @@ export default makeStyles<HomePageStyleT>()((theme, { sideBarOpen }) => {
             float: 'left',
             width: `calc(100% - ${sideBarOpen ? sideBarOpenWidth : sideBarClosedWidth})`,
             borderRadius: '0 20px 20px 0',
-            backgroundColor: '#f6f3E5',
+            backgroundColor: '#EEE',
             minHeight: '640px',
         },
         hoverableCollapseBtn: {
@@ -57,9 +57,9 @@ export default makeStyles<HomePageStyleT>()((theme, { sideBarOpen }) => {
             height: '100%',
         },
         sideBarCollapseBtn: {
-            border: `1px solid ${theme.palette.secondary.main}`,
+            border: `1px solid ${theme.palette.primary.main}`,
             zIndex: 1000,
-            backgroundColor: '#f8f8f8',
+            backgroundColor: theme.palette.primary.main,
             position: 'absolute',
             top: '53px',
             right: '0',
@@ -70,7 +70,7 @@ export default makeStyles<HomePageStyleT>()((theme, { sideBarOpen }) => {
             minHeight: '0',
             boxShadow: 'none',
             '&:hover': {
-                backgroundColor: theme.palette.secondary.main,
+                backgroundColor: theme.palette.primary.main,
                 '& .toggleIcon': {
                     color: '#f8f8f8',
                 },

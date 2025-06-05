@@ -18,8 +18,12 @@ const slice = createSlice({
         addToken: (state, { payload }) => ({
             ...state,
             access_token: payload,
-            partnerId: parseInt(jose.decodeJwt(payload).partner_id as string),
+            // partnerId: parseInt(jose.decodeJwt(payload).partner_id as string),
         }),
+        setCurrentUser: (state, { payload }) => ({
+            ...state,
+            user: payload
+        })
     },
     extraReducers: (builder) => {
         builder.addMatcher(authApi.endpoints.login.matchFulfilled, (state, { payload }) => {
@@ -32,4 +36,4 @@ export const authReducer = slice.reducer;
 
 export const selectCurrentUser = (state: RootState) => state.auth.user;
 export const selectPartnerId = (state: RootState) => state.auth.partnerId;
-export const { addToken } = slice.actions;
+export const { addToken, setCurrentUser } = slice.actions;
