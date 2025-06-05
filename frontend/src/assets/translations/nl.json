@@ -309,7 +309,17 @@
       "title": "Boer(en) uitnodigen",
       "upload-csv": "Upload een CSV-bestand"
     },
-    "remove-farmer": "Verwijder boer"
+    "remove-farmer": "Verwijder boer",
+    "unsubscribe-farmer": "Uitschrijven boer",
+    "back-to-farm-list": "Terug naar de boerenlijst"
+  },
+  "farm-season": {
+    "reference": "Referentieseizoen",
+    "season": "Seizoen",
+    "subscribed": "Geregistreerd",
+    "active": "In uitvoering",
+    "completed": "Voltooid",
+    "inactive": "Inactief"
   },
   "labels-language": "Taal",
   "labels": {
@@ -457,6 +467,7 @@
     "create-team": "Maak een team aan",
     "dashboard": "Dashboard",
     "edit-member": "Wijzig lid",
+    "farm-detail": "Boerderijdetail",
     "farm-settings-modal": "Instellingen boerderij",
     "farmer-confirm-removal-modal": "Verwijder boer ",
     "farmer-info-card": "Bent u boer?",

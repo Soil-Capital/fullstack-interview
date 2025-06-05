@@ -27,6 +27,10 @@ export function getStorageUser() {
     }
 }
 
-export function setStorageUser(user: any) {
-    localStorage.setItem('user', JSON.stringify(user));
+export function setStorageUser(user: any, remember: boolean) {
+    if (remember) {
+        localStorage.setItem('user', JSON.stringify(user));
+        return;
+    }
+    sessionStorage.setItem('user', JSON.stringify(user));
 }

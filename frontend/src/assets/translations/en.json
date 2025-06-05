@@ -313,7 +313,17 @@
       "title": "Invite farmer(s)",
       "upload-csv": "Upload a CSV"
     },
-    "remove-farmer": "Delete farmer"
+    "remove-farmer": "Delete farmer",
+    "unsubscribe-farmer": "Unsubscribe farmer",
+    "back-to-farm-list": "Back to farm list"
+  },
+  "farm-season": {
+    "reference": "Reference season",
+    "season": "Season",
+    "subscribed": "Subscribed",
+    "active": "In progress",
+    "completed": "Completed",
+    "inactive": "Inactive"
   },
   "labels-language": "Language",
   "labels": {
@@ -520,6 +530,7 @@
     "create-team": "Create a team",
     "dashboard": "Dashboard",
     "edit-member": "Edit member",
+    "farm-detail": "Farm detail",
     "farm-settings-modal": "Farm settings",
     "farmer-confirm-removal-modal": "Delete farmer ",
     "farmer-info-card": "Are you a farmer?",

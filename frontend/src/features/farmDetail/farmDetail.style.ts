@@ -9,12 +9,13 @@ export default makeStyles()(() => {
             width: '100%',
             height: '100%',
         },
-        imgContainer: {
+        subContainer: {
             display: 'flex',
             flexDirection: 'column',
             width: '100%',
-            margin: 'auto',
-            padding: '35px 35px',
+            height: '250',
+            margin: '20px 0',
+            padding: '20px 20px',
             alignItems: 'center',
             justifyContent: 'center',
         },
