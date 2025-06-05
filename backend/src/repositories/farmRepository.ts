@@ -9,11 +9,7 @@ export const listFarms = async (where?: any): Promise<FarmType[]> => {
   const result = await prisma.farm.findMany({
     where,
     include: {
-      farmSeason: {
-        where: {
-          isBaseline: true
-        }
-      }
+      farmSeason: true
     }
   });
 
