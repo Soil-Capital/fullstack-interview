@@ -38,6 +38,7 @@
   "farms":{
     "name": "Farm Name",
     "latest-season-status": "Latest Season Status",
+    "latest-season-name": "Latest Season Name",
     "seasons":{
       "status": {
         "subscribed": "Subscribed",

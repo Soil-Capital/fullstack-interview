@@ -113,6 +113,7 @@ export default function FarmSection() {
                         <TableHead>
                             <TableRow>
                                 <TableCell align="left" sx={{ fontWeight: 'bold' }}>{t('farms.name')}</TableCell>
+                                <TableCell align="left" sx={{ fontWeight: 'bold' }}>{t('farms.latest-season-name')}</TableCell>
                                 <TableCell align="left" sx={{ fontWeight: 'bold' }}>{t('farms.latest-season-status')}</TableCell>
                             </TableRow>
                         </TableHead>
@@ -130,6 +131,7 @@ export default function FarmSection() {
                                     <TableCell component="th" scope="row">
                                         {farm.name}
                                     </TableCell>
+                                    <TableCell>{farm.latestSeason?.seasonName}</TableCell>
                                     <TableCell>{t(`farms.seasons.status.${farm.latestSeason?.status.toLowerCase()}`)}</TableCell>
                                 </TableRow>
                             ))}
