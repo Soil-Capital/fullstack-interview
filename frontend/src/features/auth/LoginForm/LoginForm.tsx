@@ -5,7 +5,6 @@ import * as yup from 'yup';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useLoginMutation } from '@services';
-import { setStorageToken } from '@utils';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import useLoginFormStyle from './LoginForm.style';

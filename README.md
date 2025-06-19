@@ -33,10 +33,10 @@ So far, our PM has identified 4 status.
 * Be a hacker: find a way to successfully login to the app - hint: no code change needed.
 * Be a saviour: fix a bug in the app.  Each time we refresh the page, we're back to the login screen.  Fix it so we stay on the current page.
 * Be a builder: add two new pages to the app in order to 
-    * Fetch the farms from the backend in this repo to display a list showing the farm's name as well as the status of their latest season
+    * Fetch the farms from the backend in this repo to display a list showing the farm's name as well as the status of their current season (this year)
     * Display the farm profile when clicking on one of the farms of the list. The profile should include :
         * The farm name
-        * A timeline showing the various seasons of the farm and the status of each farm
+        * A timeline showing the various seasons of the farm as well as their status
 
 Here are some screenshots of the current implementation for *inspiration*
 

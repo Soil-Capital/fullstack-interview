@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { authApi, UserI } from '@services';
-import * as jose from 'jose';
 import type { RootState } from '../../store';
 
 type AuthState = {
@@ -17,8 +16,6 @@ const slice = createSlice({
     reducers: {
         addToken: (state, { payload }) => ({
             ...state,
-            access_token: payload,
-            partnerId: parseInt(jose.decodeJwt(payload).partner_id as string),
         }),
     },
     extraReducers: (builder) => {
